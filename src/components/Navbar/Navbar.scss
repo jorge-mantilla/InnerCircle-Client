@@ -1,0 +1,23 @@
+@use '../../styles/globals' as *;
+
+.header {
+    height: 100px;
+    background-color: rgb(116, 196, 92);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__list {
+        display: flex;
+        flex-direction: row;
+        width: 225px;
+    }
+    &__list li {
+        font-size: 16px;
+        padding: 10px;
+
+    }
+    &__logo {
+        height: 240px;
+        margin-top: 2%;
+    }
+}

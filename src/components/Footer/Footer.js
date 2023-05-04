@@ -1,10 +1,11 @@
 import React from 'react'
+import './Footer.scss'
 
 const Footer = () => {
   return (
     <section className='footer'>
-        <div className='logo'>My Logo</div>
-        <div className='footer__copyright'>Copyright</div>
+        <p className='logo'>My Logo</p>
+        <p className='footer__copyright'>Copyright</p>
     </section>
   )
 }

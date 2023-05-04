@@ -1,11 +1,14 @@
-import React from 'react'
+import React from 'react';
+import Logo from '../../assets/Images/Inner circle-2.png'
+import './Navbar.scss'
 
 const Navbar = () => {
 
   return (
     <nav className='header'>
-        <div className='header__logo'>My logo</div>
-        <div className='header__ hero'>Hero Nav</div>
+        <h3 className='header__hero'>Inner Circle</h3>
+        <img className='header__logo' src={Logo} alt='logo' />
+
         <ul className='header__list'>
             <li className='header__profile'>My profile</li>
             <li className='header__sign'>Sign up</li>

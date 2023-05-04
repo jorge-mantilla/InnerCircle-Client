@@ -1,0 +1,39 @@
+@use '../../styles/globals' as *;
+
+.hero {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    &__image {
+        width: 400px;
+    }
+    &__image-box {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    &__start {
+        width: 120px;
+        height: 50px;
+        border-radius: 30px;
+        padding: 5%;
+        background-color: black;
+        color: white;
+    }
+    &__card {
+        display: flex;
+        flex-direction: column;
+        height: 300px;
+        width: 250px;
+        background-color: lightgreen;
+        padding: 5%;
+        margin-top: 5%;
+    }
+}
+h2 {
+    padding: 5%;
+}
+
+p {
+    padding: 8% 0;
+}
