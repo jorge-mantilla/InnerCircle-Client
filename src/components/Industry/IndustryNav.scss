@@ -1,0 +1,27 @@
+@use '../../styles/globals' as *;
+
+.header {
+    height: 100px;
+    width: 100vw;
+    background-color: rgb(116, 196, 92);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__list {
+        display: flex;
+        flex-direction: row;
+        width: 250px;
+    }
+    &__list li {
+        font-size: 20px;
+        padding: 8px;
+
+    }
+    &__logo {
+        height: 240px;
+        margin-top: 2%;
+    }
+    &__hero {
+        font-size: 28px;
+    }
+}
