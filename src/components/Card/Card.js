@@ -5,7 +5,7 @@ import './Card.scss'
 const Card = () => {
   return (
     <div className='card'>My Card
-    <img className='card__image' src={Guy} alt='profile image' />
+    <img className='card__image' src={Guy} alt='profile' />
     <h4>Name</h4>
     <p>Contact</p>
     <p>Inner Circles</p>

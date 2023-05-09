@@ -8,11 +8,11 @@ const Hero = () => {
         <div className='hero__image-box'>
         <img className='hero__image' src={Heroimage} alt="hero logo" />
         </div>
-        <div className='hero__card'>
+        {/* <div className='hero__card'>
             <h2>Welcome</h2>
             <p>Click here to get started</p>
-        <button className='hero__start'>Get Started !</button>
-        </div>
+        <button className='hero__start'>Get Started !</button> */}
+        {/* </div> */}
     </section>
   )
 }
