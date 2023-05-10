@@ -1,11 +1,10 @@
 [
-    {"id":1,"title":"Snowboard","price":"$100","image":"/src/assets/Images/Items/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
-    {"id":1,"title":"Snowboard","price":"$100","image":"/src/assets/Images/Items/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
-    {"id":1,"title":"Snowboard","price":"$100","image":"/src/assets/Images/Items/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
-    {"id":1,"title":"Snowboard","price":"$100","image":"/src/assets/Images/Items/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
-    {"id":1,"title":"Snowboard","price":"$100","image":"/src/assets/Images/Items/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
-    {"id":1,"title":"Snowboard","price":"$100","image":"/src/assets/Images/Items/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
-    {"id":1,"title":"Snowboard","price":"$100","image":"/src/assets/Images/Items/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
-    {"id":1,"title":"Snowboard","price":"$100","image":"/src/assets/Images/Items/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
-    {"id":1,"title":"Snowboard","price":"$100","image":"/src/assets/Images/Items/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"}
+    {"id":1,"title":"Snowboard","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":2,"title":"Snowboard","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":3,"title":"Snowboard","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":4,"title":"Snowboard","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":5,"title":"Snowboard","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":6,"title":"Snowboard","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":7,"title":"Snowboard","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":8,"title":"Snowboard","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"}
 ]

@@ -2,20 +2,23 @@
 @use "../../styles/variables" as *;
 
 .hero {
-    height: 100vh;
+    height: 800px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     background-color: $primary-blue-steel-over;
     &__image {
-        width: 400px;
+        width: 300px;
     }
     &__card {
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
         height: 300px;
-        width: 250px;
-        background-color: lightgreen;
-        padding: 5%;
-        margin-top: 5%;
+        width: 300px;
+        background-color: $primary-blue-steel-over;
+        padding: 2%;
+        font-size: 50px;
     }
 }

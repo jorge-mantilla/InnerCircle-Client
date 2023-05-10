@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion"
 import "./Profile.scss";
 import ProfileCard from "../../components/ProfileCard/ProfileCard";
 import Navbar from "../../components/Navbar/Navbar";
@@ -7,12 +8,12 @@ import UploadCard from "../../components/UploadCard/UploadCard";
 
 const Profile = () => {
   return (
-    <section className="profile">
+    <motion.section className="profile" initial={{width: 0}} animate={{width: "100%"}} exit={{x: window.innerWidth, transition: {duration: 0.1}}}>
       <Navbar />
       <ProfileCard />
       <UploadCard />
       {/* <AddFriend /> */}
-    </section>
+    </motion.section>
   );
 };
 

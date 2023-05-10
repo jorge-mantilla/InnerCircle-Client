@@ -4,7 +4,7 @@
 .ic {
     height: 800px;
     width: 390px;
-    background-color: $primary-blue-steel-over;
+    background-color: #96eff8ef;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -12,23 +12,32 @@
     
     &__image-box {
         width: 160px;
-        height: 160px;
-        border-radius: 50%;
-        background-color: bisque;
+        height: 180px;
+        background-color: #71fbf99f;
         margin: 1rem;
         display: flex;
         align-items: center;
         justify-content: center;
+        border-radius: 10%;
+        box-shadow: 
+        rgb(19, 126, 145) 5px 0px 15px 10px,
+        rgb(94, 215, 236) 0px 0px 2px 20px,
+        rgb(154, 231, 244) 0px -5px 0px 20px,
+        rgb(3, 76, 89) 0px 5px 0px 20px,
+        rgb(3, 113, 132) 0px -20px 0px 15px,
+        rgb(135, 230, 247) -5px 0px 5px 10px;
     }
     &__image {
-        width: 180px;
-        height: 180px;
-        border-radius: 50%;
+        width: 160px;
+        height: 190px;
+        border-radius: 48%;
+        border: 8px outset #9ff3f6f3;
     }
     &__email {
         font-size: 16px;
         display: flex;
         color: white;
+        text-overflow: ellipsis;
     }
     &__email-box {
         display: flex;

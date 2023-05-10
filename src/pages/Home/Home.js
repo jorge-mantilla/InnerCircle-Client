@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion} from "framer-motion"
 import Modal from "../../components/Modal/Modal"
 import Navbar from "../../components/Navbar/Navbar";
 import Register from "../../components/Auth/Register";
@@ -29,7 +30,7 @@ function Home() {
   };
 
   return (
-    <>
+    <motion.article initial={{width: 0}} animate={{width: "100%"}} exit={{x: window.innerWidth, transition: {duration: 0.1}}}>
       <Navbar handleModalOpen={handleModalOpen} />
       {modalOpen && (
         <Modal
@@ -39,7 +40,7 @@ function Home() {
         />
         )}
         <Hero />
-    </>
+    </motion.article>
   );
 }
 

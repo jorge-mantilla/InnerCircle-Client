@@ -8,5 +8,12 @@
             width: 390px;
             background-position: center;
             background-size: cover;
+            border: 1px solid black;
+    }
+    &__info-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }

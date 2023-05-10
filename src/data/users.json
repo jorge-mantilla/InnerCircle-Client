@@ -1,9 +1,68 @@
-
 [
-{"id":1,"name":"John Wick","circle":"1","image":"/guy.jpeg","email":"hmenci0@seattletimes.com","password":"iYbkyWM"},
-{"id":2,"name":"John Wick","circle":"1","image":"/guy.jpeg","email":"bmozzini1@seesaa.net","password":"Scx5TGel"},
-{"id":3,"name":"John Wick","circle":"1","image":"/guy.jpeg","email":"rpickrell2@bloglovin.com","password":"PIxJsiuV"},
-{"id":4,"name":"John Wick","circle":"1","image":"/guy.jpeg","email":"rkonert3@chicagotribune.com","password":"mueEMeyi9"},
-{"id":5,"name":"John Wick","circle":"1","image":"/guy.jpeg","email":"lbehnecken4@bigcartel.com","password":"WsMpTuiO"},
-{"id":6,"name":"John Wick","circle":"1","image":"/guy.jpeg","email":"fhudleston5@wsj.com","password":"TJneChM"}
+{"id":1,"name":"Mike Wick","circle":"1","image":"/guy.jpeg","email":"hmenci0@seattletimes.com","password":"iYbkyWM",
+"items":[ 
+    {"id":1,"title":"Paddleboard","price":"$100","image":"/paddleboard.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":2,"title":"Paddleboard","price":"$100","image":"/paddleboard.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":3,"title":"Paddleboard","price":"$100","image":"/paddleboard.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":4,"title":"Paddleboard","price":"$100","image":"/paddleboard.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":5,"title":"Paddleboard","price":"$100","image":"/paddleboard.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":6,"title":"Paddleboard","price":"$100","image":"/paddleboard.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":7,"title":"Paddleboard","price":"$100","image":"/paddleboard.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":8,"title":"Paddleboard","price":"$100","image":"/paddleboard.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"}
+]},
+{"id":2,"name":"Jessica Mino","circle":"1","image":"/girl2.jpeg","email":"bmozzini1@seesaa.net","password":"Scx5TGel",
+"items":[ 
+    {"id":1,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":2,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":3,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":4,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":5,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":6,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":7,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":8,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"}
+]},
+{"id":3,"name":"Alex Wick","circle":"1","image":"/guy.jpeg","email":"rpickrell2@bloglovin.com","password":"PIxJsiuV",
+"items":[ 
+    {"id":1,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":2,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":3,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":4,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":5,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":6,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":7,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":8,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"}
+]},
+{"id":4,"name":"John Wick","circle":"1","image":"/girl.jpeg","email":"rkonert3@chicagotribune.com","password":"mueEMeyi9",
+"items":[ 
+    {"id":1,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":2,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":3,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":4,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":5,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":6,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":7,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":8,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"}
+]},
+{"id":5,"name":"Mary Wick","circle":"1","image":"/guy.jpeg","email":"lbehnecken4@bigcartel.com","password":"WsMpTuiO",
+"items":[ 
+    {"id":1,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":2,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":3,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":4,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":5,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":6,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":7,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":8,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"}
+]},
+{"id":6,"name":"John Wick","circle":"1","image":"/girl2.jpeg","email":"fhudleston5@wsj.com","password":"TJneChM",
+"items":[ 
+    {"id":1,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":2,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":3,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":4,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":5,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":6,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":7,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":8,"title":"Dress","price":"$100","image":"/black gown.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"}
+]}
 ]
