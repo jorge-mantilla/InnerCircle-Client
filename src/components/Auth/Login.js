@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const initialValues = {
   email: "",
@@ -33,7 +34,7 @@ const Login = ({ handleClose }) => {
         type="password"
         onChange={handleInputChange}
       />
-      <button>Log in</button>
+      <Link to="/profile"><button>Log in</button></Link>
     </>
   );
 };

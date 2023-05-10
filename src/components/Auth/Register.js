@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const initialValues = {
   email: "",
@@ -34,7 +35,7 @@ const Register = ({ setSignInType, handleClose }) => {
         type="password"
         onChange={handleInputChange}
       />
-      <button>Submit</button>
+      <Link to="/profile"><button>Submit</button></Link>
       <p>
         Already have an Account?{" "}
         <span onClick={() => setSignInType("login")}>Sign in</span>

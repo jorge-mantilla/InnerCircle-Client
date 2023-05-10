@@ -1,22 +1,9 @@
 
-[{"id":1,"email":"hmenci0@seattletimes.com","password":"iYbkyWM"},
+[
+{"id":1,"email":"hmenci0@seattletimes.com","password":"iYbkyWM"},
 {"id":2,"email":"bmozzini1@seesaa.net","password":"Scx5TGel"},
 {"id":3,"email":"rpickrell2@bloglovin.com","password":"PIxJsiuV"},
 {"id":4,"email":"rkonert3@chicagotribune.com","password":"mueEMeyi9"},
 {"id":5,"email":"lbehnecken4@bigcartel.com","password":"WsMpTuiO"},
-{"id":6,"email":"fhudleston5@wsj.com","password":"TJneChM"},
-{"id":7,"email":"edechelle6@goo.ne.jp","password":"uCUAr3R"},
-{"id":8,"email":"wkenchington7@comcast.net","password":"wdGT0p"},
-{"id":9,"email":"dpranger8@mapy.cz","password":"4GhtNO0Qj77"},
-{"id":10,"email":"fpendrigh9@illinois.edu","password":"qZaW6Vvhi2"},
-{"id":11,"email":"chenzea@narod.ru","password":"isA92gv6"},
-{"id":12,"email":"rhullahb@com.com","password":"4A7jhNTX6PGH"},
-{"id":13,"email":"ltombsc@chron.com","password":"yt8dSVZB08"},
-{"id":14,"email":"tnafzgerd@is.gd","password":"7OL27i3U"},
-{"id":15,"email":"atrittame@google.it","password":"LtbE0BQYv9Hu"},
-{"id":16,"email":"blampingf@state.tx.us","password":"1QCWseEKyU"},
-{"id":17,"email":"hesmondeg@microsoft.com","password":"EiLqs1wIj"},
-{"id":18,"email":"fbricknallh@instagram.com","password":"HTK3Xo5zMX"},
-{"id":19,"email":"sbiddissi@discovery.com","password":"cfhZeqW6"},
-{"id":20,"email":"lmacfadinj@instagram.com","password":"KW7VZuPV"},
-{"id":21,"email":"smeeksk@1und1.de","password":"OywnZ0MtF"}]
+{"id":6,"email":"fhudleston5@wsj.com","password":"TJneChM"}
+]
