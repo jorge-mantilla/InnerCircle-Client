@@ -1,24 +1,13 @@
 @use '../../styles/globals' as *;
+@use "../../styles/variables" as *;
 
 .hero {
     height: 100vh;
     display: flex;
     justify-content: center;
+    background-color: $primary-blue-steel-over;
     &__image {
         width: 400px;
-    }
-    // &__image-box {
-    //     display: flex;
-    //     flex-direction: row;
-    //     align-items: center;
-    // }
-    &__start {
-        width: 120px;
-        height: 50px;
-        border-radius: 30px;
-        padding: 5%;
-        background-color: black;
-        color: white;
     }
     &__card {
         display: flex;
@@ -29,11 +18,4 @@
         padding: 5%;
         margin-top: 5%;
     }
-}
-h2 {
-    padding: 5%;
-}
-
-p {
-    padding: 8% 0;
 }

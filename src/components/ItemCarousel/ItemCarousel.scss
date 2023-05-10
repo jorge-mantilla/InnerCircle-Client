@@ -1,0 +1,12 @@
+@use '../../styles/globals' as *;
+@use "../../styles/variables" as *;
+
+.items {
+    background-color: $primary-blue-steel-over;
+    &__image {
+            height: 600px;
+            width: 390px;
+            background-position: center;
+            background-size: cover;
+    }
+}

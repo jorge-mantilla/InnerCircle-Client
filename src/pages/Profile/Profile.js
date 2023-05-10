@@ -3,6 +3,7 @@ import "./Profile.scss";
 import ProfileCard from "../../components/ProfileCard/ProfileCard";
 import Navbar from "../../components/Navbar/Navbar";
 import UploadCard from "../../components/UploadCard/UploadCard";
+// import AddFriend from "../../components/AddFriend/AddFriend";
 
 const Profile = () => {
   return (
@@ -10,7 +11,7 @@ const Profile = () => {
       <Navbar />
       <ProfileCard />
       <UploadCard />
-      {/* <Card /> */}
+      {/* <AddFriend /> */}
     </section>
   );
 };

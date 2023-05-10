@@ -1,9 +1,9 @@
 
 [
-{"id":1,"email":"hmenci0@seattletimes.com","password":"iYbkyWM"},
-{"id":2,"email":"bmozzini1@seesaa.net","password":"Scx5TGel"},
-{"id":3,"email":"rpickrell2@bloglovin.com","password":"PIxJsiuV"},
-{"id":4,"email":"rkonert3@chicagotribune.com","password":"mueEMeyi9"},
-{"id":5,"email":"lbehnecken4@bigcartel.com","password":"WsMpTuiO"},
-{"id":6,"email":"fhudleston5@wsj.com","password":"TJneChM"}
+{"id":1,"name":"John Wick","circle":"1","image":"/guy.jpeg","email":"hmenci0@seattletimes.com","password":"iYbkyWM"},
+{"id":2,"name":"John Wick","circle":"1","image":"/guy.jpeg","email":"bmozzini1@seesaa.net","password":"Scx5TGel"},
+{"id":3,"name":"John Wick","circle":"1","image":"/guy.jpeg","email":"rpickrell2@bloglovin.com","password":"PIxJsiuV"},
+{"id":4,"name":"John Wick","circle":"1","image":"/guy.jpeg","email":"rkonert3@chicagotribune.com","password":"mueEMeyi9"},
+{"id":5,"name":"John Wick","circle":"1","image":"/guy.jpeg","email":"lbehnecken4@bigcartel.com","password":"WsMpTuiO"},
+{"id":6,"name":"John Wick","circle":"1","image":"/guy.jpeg","email":"fhudleston5@wsj.com","password":"TJneChM"}
 ]

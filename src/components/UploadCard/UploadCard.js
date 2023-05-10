@@ -7,18 +7,15 @@ const UploadCard = () => {
       <h1>Upload Item</h1>
       <div className='upload__image-box'>
       <img className='upload__image' src='#' alt='item'/>
-      <img className='upload__image' src='#' alt='item'/>
-      <img className='upload__image' src='#' alt='item'/>
-      <img className='upload__image' src='#' alt='item'/>
       </div>
-      <button>Upload Picture</button>
+      <button className='btn'>Upload Picture</button>
       <form className='upload__form'>
-        <input name='' type='text' placeholder='title'/>
-        <input name='' type='text' placeholder='description'/>
-        <input name='' type='text' placeholder='price per week'/>
-        <input name='' type='text' placeholder=''/>
+        <input className='upload__input' name='' type='text' placeholder='title'/>
+        <input className='upload__input' name='' type='text' placeholder='description'/>
+        <input className='upload__input' name='' type='text' placeholder='size'/>
+        <input className='upload__input' name='' type='text' placeholder='price'/>
       </form>
-        <button>Submit</button>
+        <button className='btn'>Submit</button>
 
       </div>
   )
