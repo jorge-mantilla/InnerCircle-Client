@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import axios from 'axios';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./ItemCarousel.scss";
-// import items from "../../data/items.json"
 import users from "../../data/users.json"
 
-const ItemCarousel = () => {
+const ItemCarousel = ({userItems}) => {
+
+console.log(userItems)
 
   const responsive = {
     superLargeDesktop: {
@@ -27,22 +30,22 @@ const ItemCarousel = () => {
   };
   return (
     <article className="items">
-      <Carousel responsive={responsive}>
-        {users.map((user, i)=>{
-          console.log(user.items[i].image)
+      {/* <Carousel responsive={responsive}>
+
+        {users.items.map((item)=>{
           return (
-        <div className="items__card" key={user.items[i].id}>
-          <img className="items__image" src={user.items[i].image} alt="item" />
+        <div className="items__card" key={item.id}>
+          <img className="items__image" src={item.image} alt="item" />
           <div className="items__info-box">
-          <h2>{user.items[i].title}</h2>
-          <p>{user.items[i].price}</p>
-          <p>{user.items[i].description}</p>
+          <h2>{item.title}</h2>
+          <p>{item.price}</p>
+          <p>{item.description}</p>
           <button className="btn">Terms</button>
           </div>
         </div>
           )
         })}
-      </Carousel>
+      </Carousel> */}
     </article>
   );
 };

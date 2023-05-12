@@ -1,0 +1,26 @@
+@use '../../styles/globals' as *;
+@use "../../styles/variables" as *;
+
+.items {
+    background-color: $primary-blue-steel-over;
+    height: 850px;
+    &__card {
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__image {
+            height: 80%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            border: 6px groove #efbeec8d;
+    }
+    &__info-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -1,13 +1,13 @@
 [
 {"id":1,"name":"Mike Wick","circle":"1","image":"/guy.jpeg","email":"hmenci0@seattletimes.com","password":"iYbkyWM",
 "items":[ 
-    {"id":1,"title":"Paddleboard","price":"$100","image":"/paddleboard.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
-    {"id":2,"title":"Paddleboard","price":"$100","image":"/paddleboard.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
-    {"id":3,"title":"Paddleboard","price":"$100","image":"/paddleboard.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
-    {"id":4,"title":"Paddleboard","price":"$100","image":"/paddleboard.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
-    {"id":5,"title":"Paddleboard","price":"$100","image":"/paddleboard.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
-    {"id":6,"title":"Paddleboard","price":"$100","image":"/paddleboard.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
-    {"id":7,"title":"Paddleboard","price":"$100","image":"/paddleboard.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":1,"title":"Paddleboard","price":"$100","image":"https://i.imgur.com/qQGKJ3U.jpg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":2,"title":"Paddleboard","price":"$100","image":"https://i.imgur.com/r1D3kUQ.jpg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":3,"title":"Paddleboard","price":"$100","image":"https://i.imgur.com/lXCzpEU.jpg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":4,"title":"Paddleboard","price":"$100","image":"https://i.imgur.com/XkPVRpE.png","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":5,"title":"Paddleboard","price":"$100","image":"https://i.imgur.com/NMqOU8H.jpg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":6,"title":"Paddleboard","price":"$100","image":"https://i.imgur.com/41UOgvx.jpg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
+    {"id":7,"title":"Paddleboard","price":"$100","image":"https://i.imgur.com/pMp0iQ3.jpg","size":"Large","description":" A lovely item that will bring you joy this weekend!"},
     {"id":8,"title":"Paddleboard","price":"$100","image":"/paddleboard.jpeg","size":"Large","description":" A lovely item that will bring you joy this weekend!"}
 ]},
 {"id":2,"name":"Jessica Mino","circle":"1","image":"/girl2.jpeg","email":"bmozzini1@seesaa.net","password":"Scx5TGel",
