@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Routes, Route, useLocation, useParams } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from "framer-motion";
 import axios from "axios";
 import Home from "../pages/Home/Home";
@@ -9,28 +9,28 @@ import ItemCarousel from '../pages/ItemCarousel/ItemCarousel';
 
 const AnimatedRoutes = () => {
   const location = useLocation();
-  const { id } = useParams();
   const [users, setUsers] = useState([])
-  const [userItems, setUserItems] = useState("")
-  // console.log(users)
+  const [userItems, setUserItems] = useState([])
+  console.log(users)
 
   useEffect(() => {
       axios.get(`http://localhost:5051/users`)
       .then((response) => {
           setUsers(response.data);
+          console.log()
       })
   }, []);
 
     useEffect(() => {
-    axios.get(`http://localhost:5051/users/${id}`).then((response) => {
-          setUserItems(response.data);
-    // console.log(response.data);
+    axios.get(`http://localhost:5051/items`).then((response) => {
+      setUserItems(response.data)
+          console.log(response.data)
     })
-}, [id]);
+}, []);
 
-// if (userItems === null) {
-//   return <div>Loading!!...</div>
-// }
+if (userItems === null) {
+  return <div>Loading!!...</div>
+}
 
   return (
     <AnimatePresence>
