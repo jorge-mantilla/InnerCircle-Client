@@ -7,7 +7,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: $primary-blue-steel-over;
+    background-color: $primary-dark-blue;
+    box-shadow: inset rgb(19, 126, 145) 0px 0px 90px 55px;
     &__image {
         width: 300px;
     }
@@ -17,7 +18,7 @@
         justify-content: flex-start;
         height: 300px;
         width: 300px;
-        background-color: $primary-blue-steel-over;
+        // background-color: $primary-blue-steel-over;
         padding: 2%;
         font-size: 50px;
     }

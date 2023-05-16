@@ -1,27 +1,33 @@
 import { useState } from "react";
-import { motion} from "framer-motion"
-import Modal from "../../components/Modal/Modal"
+import { motion } from "framer-motion";
+import Modal from "../../components/Modal/Modal";
 import Navbar from "../../components/Navbar/Navbar";
 import Register from "../../components/Auth/Register";
 import Login from "../../components/Auth/Login";
-import Hero from "../Hero/Hero"
+import Hero from "../Hero/Hero";
 
-function Home() {
+function Home({ users, loggedUser }) {
   const [modalOpen, setModalOpen] = useState(false);
+  const [signInType, setSignInType] = useState(null);
+
   const close = () => {
     setModalOpen(false);
     setSignInType(null);
   };
   const open = () => setModalOpen(true);
-  const [signInType, setSignInType] = useState("register");
 
   const renderModal = () => {
     if (signInType === "register") {
       return <Register setSignInType={setSignInType} handleClose={close} />;
     } else if (signInType === "login") {
-      return <Login handleClose={close} />;
-    } else {
-      setSignInType("register");
+      return (
+        <Login
+          setSignInType={setSignInType}
+          handleClose={close}
+          users={users}
+          loggedUser={loggedUser}
+        />
+      );
     }
   };
 
@@ -30,16 +36,20 @@ function Home() {
   };
 
   return (
-    <motion.article initial={{width: 0}} animate={{width: "100%"}} exit={{x: window.innerWidth, transition: {duration: 0.1}}}>
-      <Navbar handleModalOpen={handleModalOpen} />
+    <motion.article
+      initial={{ width: 0 }}
+      animate={{ width: "100%" }}
+      exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}
+    >
+      <Navbar setSignInType={setSignInType} handleModalOpen={handleModalOpen} modalOpen={modalOpen}/>
       {modalOpen && (
         <Modal
-        children={renderModal()}
-        modalOpen={modalOpen}
-        handleClose={close}
+          children={renderModal()}
+          modalOpen={modalOpen}
+          handleClose={close}
         />
-        )}
-        <Hero />
+      )}
+      <Hero />
     </motion.article>
   );
 }

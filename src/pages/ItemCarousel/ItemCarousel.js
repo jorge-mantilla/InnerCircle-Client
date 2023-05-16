@@ -4,17 +4,24 @@ import axios from "axios";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./ItemCarousel.scss";
+import Checkout from "../Checkout/Checkout";
 
-const ItemCarousel = ({userItems}) => {
+const ItemCarousel = ({ userItems }) => {
   const { userId } = useParams();
-  const [userItemsToDisplay, setUserItemsToDisplay] = useState([])
+  const [userItemsToDisplay, setUserItemsToDisplay] = useState([]);
+  const [showCheckout, setShowCheckout] = useState(false);
   //make state for items
   useEffect(() => {
-    axios.get(`http://localhost:5051/users/${userId}/items`).then((response) => {
-      setUserItemsToDisplay(response.data)
-    })
-}, [userId]);
+    axios
+      .get(`http://localhost:5051/users/${userId}/items`)
+      .then((response) => {
+        setUserItemsToDisplay(response.data);
+      });
+  }, [userId]);
 
+  const handleTermsButtonClick = () => {
+    setShowCheckout(true); // Show the checkout section
+  };
 
   const responsive = {
     superLargeDesktop: {
@@ -34,30 +41,34 @@ const ItemCarousel = ({userItems}) => {
       items: 1,
     },
   };
-  
-  return (
 
-    <article className="items" >
+  return (
+    <article className="items">
       <Carousel responsive={responsive}>
-      {userItemsToDisplay.map((item) => {
-        console.log(item.image)
-        return (
-          <div className="items__card" key={item.id}>
-            <img className="items__image" src={item.image} alt="item" />
-            <div className="items__info-box">
-              <h2>{item.title}</h2>
-              <p>{item.price}</p>
-              <p>{item.description}</p>
-              <button className="btn">Terms</button>
-              <Link to="/circle"><button className="btn">Go Back</button></Link>
+        {userItemsToDisplay.map((item) => {
+          return (
+            <div className="items__card" key={item.id}>
+              <img className="items__image" src={item.image} alt="item" />
+              <div className="items__info-box">
+                <h2>{item.title}</h2>
+                <p>{item.price}</p>
+                <p>{item.description}</p>
+                <div className="items__checkout">
+                  {showCheckout && <Checkout />}
+                </div>
+                  <button className="btn" onClick={handleTermsButtonClick}>
+                    Terms
+                  </button>
+                <Link to="/circle">
+                  <button className="btn">Go Back</button>
+                </Link>
+              </div>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
       </Carousel>
     </article>
   );
 };
 
 export default ItemCarousel;
-

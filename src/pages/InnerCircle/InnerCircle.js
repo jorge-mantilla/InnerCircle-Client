@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { motion } from "framer-motion";
 import { Link, useParams } from "react-router-dom";
+import { motion } from "framer-motion";
+import axios from "axios";
+import NavbarTwo from "../../components/NavbarTwo/NavbarTwo";
 import "./InnerCircle.scss";
-import Navbar from "../../components/Navbar/Navbar";
-import CalendarPage from "../../components/CalendarPage/CalendarPage";
 
 const InnerCircle = ({ users }) => {
   const [userItems, setUserItems] = useState([]);
@@ -30,7 +29,7 @@ const InnerCircle = ({ users }) => {
       animate={{ width: "100%" }}
       exit={{ x: window.innerWidth, transition: { duration: 0.2 } }}
     >
-      <Navbar />
+      <NavbarTwo />
 
       <div className="ic">
         {users.map((user) => (
@@ -46,8 +45,6 @@ const InnerCircle = ({ users }) => {
           </div>
         ))}
       </div>
-
-      <CalendarPage />
     </motion.article>
   );
 };

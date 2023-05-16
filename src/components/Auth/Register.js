@@ -1,13 +1,22 @@
 import React, { useState } from "react";
+// import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import {v4 as uuidv4} from "uuid";
+import axios from "axios";
+import "./Register.scss";
 import { Link } from "react-router-dom";
 
+
 const initialValues = {
+  id: uuidv4(),
+  user_name: "",
   email: "",
-  password: "",
+  image: "",
 };
 
 const Register = ({ setSignInType, handleClose }) => {
   const [values, setValues] = useState(initialValues);
+  const [error, setError] = useState("");
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -16,31 +25,79 @@ const Register = ({ setSignInType, handleClose }) => {
       [name]: value,
     });
   };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Send POST request to server
+    try {
+      const response = await axios.post("http://localhost:5051/users", values);
+      setValues(initialValues);
+
+      if (response.status !== 201) {
+        throw new Error("Failed to register user.");
+      }
+      window.alert('User has been registered successfully!');
+
+      // Close the registration modal
+      handleClose();
+    } catch (error) {
+      setError(error.message);
+    }
+  };
 
   return (
-    <>
-      <button onClick={handleClose}>X</button>
-      <div>Register</div>
-      <h2>Join Inner Cicle</h2>
-      <input
-        name="email"
-        value={values.email}
-        placeholder="Email"
-        onChange={handleInputChange}
-      />
-      <input
-        name="password"
-        value={values.password}
-        placeholder="Password"
-        type="password"
-        onChange={handleInputChange}
-      />
-      <Link to="/profile"><button>Submit</button></Link>
-      <p>
+    <article className="register">
+      <button className="btn-x" onClick={handleClose}>
+        X
+      </button>
+      <p className="register__top-text">Register</p>
+      <h2 className="register__header">Join Inner Cicle!</h2>
+      <form onSubmit={handleSubmit}>
+        <motion.input
+          whileHover={{ scale: 1.8 }}
+          whileTap={{ scale: 1.4 }}
+          className="register__input"
+          name="user_name"
+          value={values.user_name}
+          placeholder="User Name"
+          onChange={handleInputChange}
+        />
+        <motion.input
+          whileHover={{ scale: 1.8 }}
+          whileTap={{ scale: 1.4 }}
+          className="register__input"
+          name="email"
+          value={values.email}
+          placeholder="Email"
+          onChange={handleInputChange}
+        />
+        <motion.input
+          whileHover={{ scale: 1.8 }}
+          whileTap={{ scale: 1.4 }}
+          className="register__input"
+          name="image"
+          value={values.image}
+          placeholder="Avatar Image Url"
+          type="text"
+          onChange={handleInputChange}
+        />
+
+        <motion.button
+          className="btn"
+          whileHover={{ scale: 1.8 }}
+          whileTap={{ scale: 1.4 }}
+          type="submit"
+        >
+          Submit
+        </motion.button>
+      </form>
+      <p className="register__text">
         Already have an Account?{" "}
-        <span onClick={() => setSignInType("login")}>Sign in</span>
+        <Link to="/profile/:email"><span className="register__span">
+          Sign in
+        </span></Link>
       </p>
-    </>
+    </article>
   );
 };
 

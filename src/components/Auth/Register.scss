@@ -1,0 +1,49 @@
+@use '../../styles/globals' as *;
+@use "../../styles/variables" as *;
+
+.register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__input {
+        margin: 20px;
+        padding: 10px;
+        width: 280px;
+        border: 14px groove $primary-blue;
+        font-size: 20px;
+        background-color: $primary-snow;
+        color: $primary-dark-blue;
+        &:hover {
+            outline:none;
+            cursor: pointer;
+        }
+        &:active {
+            outline:none;
+        }
+    }
+    &__text {
+        margin: 20px;
+        font-size: 20px;
+        color: $primary-snow;
+    }
+    &__top-text {
+        margin: 20px;
+        font-size: 28px;
+        color: $primary-snow;
+    }
+    &__header {
+        font-size: 32px;
+        padding: 5%;
+        color: $primary-blue;
+    }
+    &__span {
+        color: $primary-blue;
+        font-size: 24px;
+        font-weight: 500;
+    }
+}
+
+.login {
+    margin: 40%;
+}

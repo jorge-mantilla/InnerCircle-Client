@@ -1,24 +1,85 @@
-import React from 'react'
-import "./UploadCard.scss"
+import React, { useState, useContext } from 'react';
+import { AuthContext } from "../../context/AuthState";
+import { v4 as uuidv4 } from 'uuid';
+import axios from 'axios';
+import "./UploadCard.scss";
 
-const UploadCard = () => {
+const UploadCard = ({ userId, userName }) => {
+  const {currentUser, setCurrentUser} = useContext(AuthContext);
+
+  const [title, setTitle] = useState('');
+  const [price, setPrice] = useState('');
+  const [description, setDescription] = useState('');
+  const [imageUrl, setImageUrl] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const newItem = {
+      id: uuidv4(),
+      user_id: userId,
+      title: title,
+      price: price,
+      description: description,
+      image: imageUrl
+    };
+
+    try {
+      const response = await axios.post('http://localhost:5051/items', newItem);
+      console.log('Item uploaded:', response.data);
+      // Handle success, e.g., show a success message or redirect
+    } catch (error) {
+      console.error('Error uploading item:', error);
+      // Handle error, e.g., show an error message
+    }
+  };
+
   return (
     <div className='upload'>
       <h1>Upload Item</h1>
-      <div className='upload__image-box'>
-      <img className='upload__image' src='#' alt='item'/>
-      </div>
-      <button className='btn'>Upload Picture</button>
-      <form className='upload__form'>
-        <input className='upload__input' name='' type='text' placeholder='title'/>
-        <input className='upload__input' name='' type='text' placeholder='description'/>
-        <input className='upload__input' name='' type='text' placeholder='size'/>
-        <input className='upload__input' name='' type='text' placeholder='price'/>
+      <p>{currentUser.user_name}</p>
+      <form className='upload__form' onSubmit={handleSubmit}>
+        <input
+          className='upload__input'
+          name='title'
+          type='text'
+          placeholder='Title'
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+        />
+        <input
+          className='upload__input'
+          name='price'
+          type='text'
+          placeholder='Price'
+          value={price}
+          onChange={(e) => setPrice(e.target.value)}
+        />
+        <input
+          className='upload__input'
+          name='description'
+          type='text'
+          placeholder='Description'
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+        />
+          {imageUrl && (
+            <div className='upload__image-preview'>
+              <img className='upload__image-view' src={imageUrl} alt='Image Preview' />
+            </div>
+          )}
+      <input
+          className='upload__input'
+          name='image'
+          type='text'
+          placeholder='Image URL'
+          value={imageUrl}
+          onChange={(e) => setImageUrl(e.target.value)}
+        />
+        <button className='btn' type='submit'>Submit</button>
       </form>
-        <button className='btn'>Submit</button>
+    </div>
+  );
+};
 
-      </div>
-  )
-}
-
-export default UploadCard
+export default UploadCard;

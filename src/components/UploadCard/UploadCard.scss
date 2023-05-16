@@ -5,41 +5,68 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 800px;
+  height: 890px;
   width: 390px;
-  background-color: $primary-blue-steel-over;
+  background-color: #162052;
   padding: 4%;
-  border: 2px solid black;
-  // box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-  //   rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-  //   rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  &__image-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 380px;
-    height: 250px;
-    padding: 0.5rem;
-  }
-  &__image {
-    width: 150px;
-    height: 150px;
-  }
   &__form {
     height: 600px;
+    width: 390px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20%;
+  }
+  &__input {
+    margin: 20px;
+    padding: 10px;
+    width: 280px;
+    border: 14px groove $primary-blue;
+    font-size: 20px;
+    background-color: $primary-snow;
+    color: $primary-dark-blue;
+    &:hover {
+        outline:none;
+        cursor: pointer;
+    }
+    &:active {
+        outline:none;
+    }
+    &:focus {
+          outline: none;
+          // border: 1px solid black;
+        }
+}
+  // &__input {
+  //   width: 300px;
+  //   height: 50px;
+  //   border-radius: 20px;
+  //   border: 3px groove $primary-blue;
+  //   padding: 10px;
+  //   font-size: 18px;
+  //   background-color: bisque;
+  //   margin: 15px 0;
+  //   &:hover {
+  //     outline: none;
+  //     // border: 1px solid black;
+  //     cursor: pointer;
+  //   }
+  //   &:focus {
+  //     outline: none;
+  //     border: 1px solid black;
+  //   }
+  // }
+  &__image-preview {
+    height: 250px;
     width: 390px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  &__input {
-    width: 300px;
-    height: 50px;
-    border-radius: 20px;
-    padding: 10px;
-    background-color: bisque;
-    margin: 10px 0;
+  &__image-view {
+    height: 250px;
+    width: 320px;
+    border-radius: 5%;
   }
 }

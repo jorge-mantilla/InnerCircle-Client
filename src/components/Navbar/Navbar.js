@@ -1,36 +1,43 @@
 import React from "react";
-import Logo from "../../assets/Images/Inner circle-2.png";
 import "./Navbar.scss";
 import { Link } from "react-router-dom";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
 
-const Navbar = ({ handleModalOpen }) => {
+const Navbar = ({ handleModalOpen, setSignInType }) => {
+  
+  const handleClick = (type) => {
+    handleModalOpen();
+    setSignInType(type);
+  };
+
   return (
     <nav className="header">
-      <div className="header__logo-box">
-        <Link to="/">
-          <motion.img
-            className="header__logo"
-            src={Logo}
-            alt="logo"
-            whileHover={{ scale: 1.3 }}
-            whileTap={{ scale: 1.1 }}
-          />
-        </Link>
-        <h3 className="header__hero">Inner Circle</h3>
-      </div>
-      <Link to="/circle">
-        <button className="btn">Browse</button>
-      </Link>
-      <button className="btn" onClick={handleModalOpen}>
-        Get Started
-      </button>
+      <motion.h3
+        className="header__hero"
+        whileHover={{ scale: 1.5 }}
+        whileTap={{ scale: 1.4 }}
+      >
+        Inner Circle
+      </motion.h3>
+      <ul className="header__list">
+        <motion.li
+          className="header__register"
+          whileHover={{ scale: 1.3 }}
+          whileTap={{ scale: 1.1 }}
+          onClick={() => handleClick("register")}
+        >
+          Register
+        </motion.li>
 
-      {/* <ul className='header__list'>
-            <li className='header__profile'>Profile</li>
-            <li className='header__sign'>Sign up</li>
-            <li className='header__login'>Log in</li>
-          </ul> */}
+        <motion.li
+          whileHover={{ scale: 1.3 }}
+          whileTap={{ scale: 1.1 }}
+          className="header__login"
+          onClick={() => handleClick("login")}
+        >
+          Log in
+        </motion.li>
+      </ul>
     </nav>
   );
 };
