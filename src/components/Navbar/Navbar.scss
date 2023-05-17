@@ -1,41 +1,33 @@
 @use '../../styles/globals' as *;
+@use "../../styles/variables" as *;
 
 .header {
-    height: 50px;
+    height: 65px;
     width: 100%;
-    background-color: rgb(116, 196, 92);
+    background-color: $primary-dark-blue;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    // &__list {
-    //     display: flex;
-    //     flex-direction: row;
-    //     width: 125px;
-    // }
-    // &__list li {
-    //     font-size: 10px;
-    //     // padding: 10px;
-
-    // }
+    border-bottom: 1px double $primary-blue;
+    
     &__hero {
-        font-size: 16px;
+        font-size: 22px;
+        padding-left: 40px;
+        color: $primary-snow;
     }
-    &__logo {
-        height: 60px;
-        margin-top: 3%;
-    }
-    &__logo-box {
+    &__list {
         display: flex;
         align-items: center;
-        width: 120px;
-        margin: 0 2%;
+        width: 350px;
+        
     }
-    &__btn {
-        width: 60px;
-        border-radius: 16px;
-        font-size: 10px;
-        padding: 2px;
-        background-color: black;
-        color: whitesmoke;
+    &__register {
+        padding: 0 30px;
+        color: $primary-snow;
+        font-size: 18px;
+    }
+    &__login {
+        font-size: 18px;
+        color: $primary-snow;
     }
 }

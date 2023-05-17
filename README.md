@@ -1,3 +1,41 @@
+
+
+INTRO: Welcome to our revolutionary renting service designed exclusively for friends and family! Our platform is specifically tailored to make the process of borrowing and lending items among your loved ones easier, more convenient, and cost-effective. With our cutting-edge technology and user-friendly interface, we aim to save you time, money, and space.
+
+#Tech Stack
+- React
+- React Router Dom
+- Font Awesome
+- Knex
+- Node
+- Express
+- My SQL
+- Google Fonts
+- Animation
+
+#Features and/or usage instructions
+Features:
+- Create a profile
+- Log in
+- Add Friends and Family to your circle
+- Upload Items, Edit Items and Delete Items to Rent
+- Custom Profile Picture
+- View what people have to rent in your circle
+Instructions:
+    1) Create an account and login by clicking the "Register" or "Log in"
+    2) Edit your information on your Profile Page
+    3) Add Items and include a Title, Price, Description and Image
+    4) Edit or Delete these Items
+    5) Click Inner Circle to view your circle you joined or created
+    6) Here you can view and select what you might want to try out or use instead of purchase
+    7) Once you found the item you wanted, Click on the select button.
+    8) A Model will appear with a date range picker, pick the dates you would like the item for and
+    click reserve. The Item will show the dates unavailable now and a message will be sent to the owner.
+    9) Coordinate Pick up and Drop off.
+
+
+
+Default
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

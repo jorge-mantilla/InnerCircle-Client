@@ -1,20 +1,42 @@
-import React from 'react'
-import './Hero.scss'
-import Heroimage from '../../assets/Images/Inner circle-1.png'
-
+import React from "react";
+import "./Hero.scss";
+import Heroimage from "../../assets/Images/Inner circle-1.png";
 const Hero = () => {
-  return (
-    <section className='hero'>
-        <div className='hero__image-box'>
-        <img className='hero__image' src={Heroimage} alt="hero logo" />
-        </div>
-        {/* <div className='hero__card'>
-            <h2>Welcome</h2>
-            <p>Click here to get started</p>
-        <button className='hero__start'>Get Started !</button> */}
-        {/* </div> */}
-    </section>
-  )
-}
 
-export default Hero
+  
+  return (
+    <section className="hero">
+      <div className="hero__image-box">
+        <img className="hero__image" src={Heroimage} alt="hero logo" />
+      </div>
+      <div className="hero__card">
+        <p className="hero__text">Stengthen your Circle</p>
+        <br></br>
+        <p className="hero__text">borrow don't buy</p>
+          <br></br>
+        <p className="hero__text">Get more</p>
+      {/* <Typewriter
+        onInit={(typewriter) => {
+          typewriter
+          
+          .typeString("Create")
+          .pauseFor(400)
+          .deleteAll()
+          .start()
+        }}
+        />
+      <Typewriter
+        onInit={(typewriter) => {
+          typewriter
+          .typeString("Or Join")
+          .pauseFor(800)
+          .deleteAll()
+          .start()
+        }}
+        /> */}
+      </div>
+    </section>
+  );
+};
+
+export default Hero;

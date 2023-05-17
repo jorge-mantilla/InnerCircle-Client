@@ -1,0 +1,60 @@
+@use "../../styles/globals" as *;
+@use "../../styles/variables" as *;
+
+.checkout {
+  background-color: $primary-dark-blue;
+  height: 800px;
+  width: 390px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__header {
+    font-size: 32px;
+    padding: 20px 0;
+    color: $primary-blue;
+  }
+  &__setDate {
+    font-size: 24px;
+    padding: 15px 0;
+    color: $primary-snow;
+  }
+  &__input {
+    margin: 20px;
+    padding: 10px;
+    width: 280px;
+    border: 6px groove $primary-blue;
+    font-size: 20px;
+    background-color: $primary-snow;
+    color: $primary-dark-blue;
+    &:hover {
+        outline:none;
+        cursor: pointer;
+    }
+    &:active {
+        outline:none;
+    }
+    &:focus {
+          outline: none;
+          // border: 1px solid black;
+        }
+}
+  &__start {
+    width: 300px;
+    height: 50px;
+    border-radius: 100%;
+    padding: 15px;
+    background-color: bisque;
+    margin: 40px 0;
+  }
+  &__end {
+    width: 300px;
+    height: 50px;
+    border-radius: 100%;
+    padding: 15px;
+    background-color: bisque;
+    margin: 40px 0;
+  }
+  &__calendar {
+    margin: 40px 0;
+  }
+}
