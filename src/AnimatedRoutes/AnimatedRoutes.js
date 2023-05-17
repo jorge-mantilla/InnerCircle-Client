@@ -32,7 +32,7 @@ const AnimatedRoutes = () => {
       
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home users={users} loggedUser={loggedUser}/>} />
-        <Route path="/profile/:email" element={<Profile users={users} loggedUser={loggedUser} />} />
+        <Route path="/profile/:userId" element={<Profile users={users} userItems={userItems} />} />
         <Route path="/circle" element={<InnerCircle users={users} />} />
         <Route
           path="/circle/:userId"

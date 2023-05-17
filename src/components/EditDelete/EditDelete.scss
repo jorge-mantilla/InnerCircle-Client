@@ -1,0 +1,15 @@
+@use "../../styles/globals" as *;
+@use "../../styles/variables" as *;
+
+
+.editdelete {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 6px;
+    &__text {
+        color: $primary-snow;
+        font-size: 26px;
+        text-align: center;
+    }
+}

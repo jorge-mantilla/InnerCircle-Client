@@ -37,7 +37,7 @@ function Home({ users, loggedUser }) {
 
   return (
     <motion.article
-      initial={{ width: 0 }}
+      initial={{ width: "50%" }}
       animate={{ width: "100%" }}
       exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}
     >

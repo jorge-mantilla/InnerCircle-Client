@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleUser } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import NavbarTwo from "../../components/NavbarTwo/NavbarTwo";
 import "./InnerCircle.scss";
@@ -33,15 +35,29 @@ const InnerCircle = ({ users }) => {
 
       <div className="ic">
         {users.map((user) => (
-          <div className="ic__image-box" key={user.id}>
-            <Link to="/circle/:userId">
-              <img
-                className="ic__image"
-                src={user.image}
-                alt="heads"
-                onClick={() => handleUserClick(user.id)}
-              />
-            </Link>
+          <div className="ic__container" key={user.id}>
+            {/* <p>{}</p> */}
+            <p className="ic__username">{user.user_name}</p>
+            <div className="ic__image-box">
+              <div className="ic__image-content">
+                <Link to="/circle/:userId">
+                  {user.image ? (
+                    <img
+                      className="ic__image"
+                      src={user.image}
+                      alt="heads"
+                      onClick={() => handleUserClick(user.id)}
+                    />
+                  ) : (
+                    <FontAwesomeIcon
+                      className="items__default"
+                      icon={faCircleUser}
+                      size="lg"
+                    />
+                  )}
+                </Link>
+              </div>
+            </div>
           </div>
         ))}
       </div>

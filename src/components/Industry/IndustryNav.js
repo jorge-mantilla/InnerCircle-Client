@@ -1,7 +1,7 @@
+import { motion } from 'framer-motion'
 import React from 'react'
 import Logo from '../../assets/Images/Inner circle-2.png'
 import './IndustryNav.scss'
-import { motion } from 'framer-motion'
 
 
 const IndustryNav = () => {

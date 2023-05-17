@@ -1,15 +1,14 @@
 import React, { useState } from "react";
-// import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {v4 as uuidv4} from "uuid";
 import axios from "axios";
 import "./Register.scss";
-import { Link } from "react-router-dom";
 
 
 const initialValues = {
   id: uuidv4(),
   user_name: "",
+  password: "",
   email: "",
   image: "",
 };
@@ -38,8 +37,9 @@ const Register = ({ setSignInType, handleClose }) => {
       }
       window.alert('User has been registered successfully!');
 
+      setSignInType("login")
       // Close the registration modal
-      handleClose();
+      // handleClose();
     } catch (error) {
       setError(error.message);
     }
@@ -52,7 +52,7 @@ const Register = ({ setSignInType, handleClose }) => {
       </button>
       <p className="register__top-text">Register</p>
       <h2 className="register__header">Join Inner Cicle!</h2>
-      <form onSubmit={handleSubmit}>
+      <form className="register__form" onSubmit={handleSubmit}>
         <motion.input
           whileHover={{ scale: 1.8 }}
           whileTap={{ scale: 1.4 }}
@@ -60,6 +60,16 @@ const Register = ({ setSignInType, handleClose }) => {
           name="user_name"
           value={values.user_name}
           placeholder="User Name"
+          onChange={handleInputChange}
+        />
+        <motion.input
+          whileHover={{ scale: 1.8 }}
+          whileTap={{ scale: 1.4 }}
+          className="register__input"
+          name="password"
+          value={values.password}
+          placeholder="password"
+          type="password"
           onChange={handleInputChange}
         />
         <motion.input
@@ -91,12 +101,6 @@ const Register = ({ setSignInType, handleClose }) => {
           Submit
         </motion.button>
       </form>
-      <p className="register__text">
-        Already have an Account?{" "}
-        <Link to="/profile/:email"><span className="register__span">
-          Sign in
-        </span></Link>
-      </p>
     </article>
   );
 };

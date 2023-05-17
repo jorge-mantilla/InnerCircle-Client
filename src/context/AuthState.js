@@ -8,6 +8,10 @@ export const AuthProvider = ({ children }) => {
     return storedUser ? JSON.parse(storedUser):"";
   });
 
+  const removeCurrentUser = () => {
+    setCurrentUser(null);
+    localStorage.removeItem("currentUser");
+  };
 
   useEffect(() => {
     localStorage.setItem("currentUser", JSON.stringify(currentUser));
@@ -19,6 +23,7 @@ export const AuthProvider = ({ children }) => {
       value={{
         currentUser,
         setCurrentUser,
+        removeCurrentUser,
       }}
     >
       {children}

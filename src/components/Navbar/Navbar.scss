@@ -1,34 +1,33 @@
 @use '../../styles/globals' as *;
+@use "../../styles/variables" as *;
 
 .header {
-    height: 50px;
+    height: 65px;
     width: 100%;
-    background-color: #ffffff;
+    background-color: $primary-dark-blue;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px double rgb(1, 14, 12);
+    border-bottom: 1px double $primary-blue;
+    
     &__hero {
         font-size: 22px;
         padding-left: 40px;
-        color: black;
+        color: $primary-snow;
     }
     &__list {
         display: flex;
         align-items: center;
-        width: 200px;
+        width: 350px;
         
     }
     &__register {
         padding: 0 30px;
-        color: black;
+        color: $primary-snow;
         font-size: 18px;
-
-
-        
     }
     &__login {
         font-size: 18px;
-        color: black;
+        color: $primary-snow;
     }
 }

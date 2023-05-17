@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios';
 import "./UploadCard.scss";
 
-const UploadCard = ({ userId, userName }) => {
+const UploadCard = ({ userId, handleUserItemAdd }) => {
   const {currentUser, setCurrentUser} = useContext(AuthContext);
 
   const [title, setTitle] = useState('');
@@ -16,7 +16,6 @@ const UploadCard = ({ userId, userName }) => {
     e.preventDefault();
 
     const newItem = {
-      id: uuidv4(),
       user_id: userId,
       title: title,
       price: price,
@@ -26,7 +25,10 @@ const UploadCard = ({ userId, userName }) => {
 
     try {
       const response = await axios.post('http://localhost:5051/items', newItem);
+      const { id: itemId } = response.data; // Extract the generated item ID from the response
       console.log('Item uploaded:', response.data);
+      handleUserItemAdd({ ...newItem, id: itemId }); // Pass the item with generated ID to the handler
+      alert('Item Uploaded');
       // Handle success, e.g., show a success message or redirect
     } catch (error) {
       console.error('Error uploading item:', error);
@@ -36,8 +38,8 @@ const UploadCard = ({ userId, userName }) => {
 
   return (
     <div className='upload'>
-      <h1>Upload Item</h1>
-      <p>{currentUser.user_name}</p>
+      <h1 className='upload__header'>Upload Item</h1>
+      <p className='upload__user'>{currentUser.user_name}</p>
       <form className='upload__form' onSubmit={handleSubmit}>
         <input
           className='upload__input'

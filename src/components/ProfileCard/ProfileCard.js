@@ -1,105 +1,117 @@
-import React, { useState, useContext} from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { AuthContext } from "../../context/AuthState";
-import UploadCard from "../UploadCard/UploadCard.js"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleUser } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate, useParams } from "react-router-dom";
+import UploadCard from "../UploadCard/UploadCard.js";
+import UserItems from "../UserItems/UserItems";
+import axios from "axios";
 import "./ProfileCard.scss";
 
-const ProfileCard = ({ users, loggedUser }) => {
-  const {currentUser, setCurrentUser} = useContext(AuthContext);
-  const [searchTerm, setSearchTerm] = useState("");
-  const [userId, setUserId] = useState(null);
-  // const [email, setEmail] = useState('');
+const ProfileCard = ({ users }) => {
+  const { currentUser, setCurrentUser } = useContext(AuthContext);
+  const [userItemsToDisplay, setUserItemsToDisplay] = useState([]);
+  const { userId } = useParams();
 
-  const handleAddFriendSubmit = (event) => {
-    event.preventDefault();
+  const navigate = useNavigate();
 
-  //   const data = {
-  //     email
-  //   };
-    
-  //   axios
-  //     .post("http://localhost:5051/email", data)
-  //     .then((response) => {
-  //       // Handle success response
-  //       console.log("Email sent successfully:", response.data);
-  //       setEmail(""); // Reset the email input field
-  //     })
-  //     .catch((error) => {
-  //       // Handle error response
-  //       console.error("Error sending email:", error);
-  //     });
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          `http://localhost:5051/users/${userId}/items`
+        );
+        console.log(response.data);
+        setUserItemsToDisplay(response.data);
+      } catch (error) {
+        // Handle error
+        console.error(error);
+      }
+    };
+    fetchData();
+  }, [userId]);
+
+  const { removeCurrentUser } = useContext(AuthContext);
+
+  const handleLogout = () => {
+    removeCurrentUser();
+    navigate("/"); // Replace '/login' with the desired redirect path
   };
 
-  const handleSearchSubmit = (event) => {
-    event.preventDefault();
-    const user = users.find((user) => user.email === searchTerm);
-    if (user) {
-      setUserId(user.id);
+  const handleAddItem = (newItem) => {
+    setUserItemsToDisplay((prevItems) => [...prevItems, newItem]);
+  };
+  const handleUserItemAdd = (newItem) => {
+    setUserItemsToDisplay((prevItems) => [...prevItems, newItem]);
+  };
+
+  const handleDeleteItem = async (itemId) => {
+    try {
+      const response = await axios.delete(
+        `http://localhost:5051/items/${itemId}`
+      );
+      console.log(response.data); // Optional: Log the response data
+      // Handle success, e.g., show a success message or update the item list
+      setUserItemsToDisplay((prevItems) =>
+        prevItems.filter((item) => item.id !== itemId)
+      );
+    } catch (error) {
+      console.error(`Error deleting item ${itemId}:`, error);
+      // Handle error, e.g., show an error message
     }
   };
 
   return (
     <article className="card__container">
-
-      {/* <h1> Enter your email!</h1>
-      <form onSubmit={handleSearchSubmit}>
-        <div>
-          <input
-            className="card__input"
-            name="user_email"
-            placeholder="Enter email"
-            value={ searchTerm }
-            onChange={(event) => setSearchTerm(event.target.value)}
-          />
-        </div>
-        <button type="submit" className="btn">
-          Log In
-        </button>
-      </form> */}
-
-      {/* <h1> Invite Someone!</h1>
-      <form onSubmit={handleAddFriendSubmit}>
-        <div>
-          <input
-            className="card__input"
-            name="sendInvite"
-            placeholder="Send Email Invite"
-            value={ email }
-            onChange={(event) => setEmail(event.target.value)}
-          />
-        </div>
-        <button type="submit" className="btn">
-          Send Invite
-        </button>
-      </form> */}
-
       <div className="card">
         <div className="card__image-box">
           <div className="card__image-content">
-          
-            <img
-              className="card__image"
-              src={currentUser.image}
-              alt="profile"
-            />
-          
+            {currentUser && currentUser.image ? (
+              <img
+                className="card__image"
+                src={currentUser.image}
+                alt="profile"
+              />
+            ) : (
+              <FontAwesomeIcon
+                className="card__default"
+                icon={faCircleUser}
+                size="lg"
+              />
+            )}
           </div>
         </div>
         <div className="card">
           <div className="card__box">
-              <p className="card__text">
-              {currentUser.user_name}
-              </p>
+            <p className="card__text">{currentUser.user_name}</p>
           </div>
         </div>
+        <button onClick={handleLogout} className="btn">
+          Logout
+        </button>
         <div className="card">
           <div className="card__box">
-              <p className="card__text">
-                {currentUser.email}
-              </p>
+            <p className="card__text">{currentUser.email}</p>
           </div>
         </div>
+        <UserItems
+          userItemsToDisplay={userItemsToDisplay}
+          handleAddItem={handleAddItem}
+          handleDeleteItem={handleDeleteItem}
+        />
+
+        <input
+          className="card__input"
+          name="add_user"
+          type="text"
+          placeholder="Join Cicle"
+        />
       </div>
-      <UploadCard users={users} userId={userId} />
+      <UploadCard
+        users={users}
+        userId={userId}
+        handleUserItemAdd={handleUserItemAdd}
+      />
     </article>
   );
 };

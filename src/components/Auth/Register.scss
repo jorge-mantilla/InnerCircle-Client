@@ -6,11 +6,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 10;
     &__input {
         margin: 20px;
         padding: 10px;
         width: 280px;
-        border: 14px groove $primary-blue;
+        border: 6px groove $primary-blue;
         font-size: 20px;
         background-color: $primary-snow;
         color: $primary-dark-blue;
@@ -37,13 +38,9 @@
         padding: 5%;
         color: $primary-blue;
     }
-    &__span {
-        color: $primary-blue;
-        font-size: 24px;
-        font-weight: 500;
+    &__form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-}
-
-.login {
-    margin: 40%;
 }

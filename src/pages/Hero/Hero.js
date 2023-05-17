@@ -1,7 +1,6 @@
 import React from "react";
 import "./Hero.scss";
 import Heroimage from "../../assets/Images/Inner circle-1.png";
-import Typewriter from "typewriter-effect";
 const Hero = () => {
 
   
@@ -11,6 +10,11 @@ const Hero = () => {
         <img className="hero__image" src={Heroimage} alt="hero logo" />
       </div>
       <div className="hero__card">
+        <p className="hero__text">Stengthen your Circle</p>
+        <br></br>
+        <p className="hero__text">borrow don't buy</p>
+          <br></br>
+        <p className="hero__text">Get more</p>
       {/* <Typewriter
         onInit={(typewriter) => {
           typewriter

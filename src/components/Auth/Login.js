@@ -6,16 +6,15 @@ import { getSingleUserByEmail } from "../../context/auth";
 import "./Register.scss";
 
 const initialValues = {
-  user_name: "",
   email: "",
+  password: "",
 };
 
-const Login = ({ handleClose, users, loggedUser }) => {
+const Login = ({ handleClose }) => {
   const { currentUser, setCurrentUser } = useContext(AuthContext);
-  const usersEmail = useParams();
+  const userId = useParams();
   const navigate = useNavigate();
   const [values, setValues] = useState(initialValues);
-  const [isEmailValid, setIsEmailValid] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -24,22 +23,28 @@ const Login = ({ handleClose, users, loggedUser }) => {
       [name]: value,
     });
   };
-  console.log(" possible current User?:", values);
-  console.log("this is the current user:", currentUser);
+  // console.log(" possible current User?:", values);
+  // console.log("this is the current user:", currentUser);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const emailToSet = await getSingleUserByEmail(values.email);
-    setCurrentUser(emailToSet);
-    navigate(`/profile/${values.email}`);
+    const user = await getSingleUserByEmail(values.email);
+    if (user) {
+      console.log(user)
+      setCurrentUser(user);
+      navigate(`/profile/${user.id}`);
+    } else {
+      console.log("User not found!");
+    }
   };
 
-  // const handleSubmit = (e) => {
+  // const handleSubmit = async (e) => {
   //   e.preventDefault();
-  //   // Check if email is valid
-  //   // const isValid = users.some((user) => user.email === values.email);
-  //   // setIsEmailValid(isValid);
-  //   // if (isValid) {
+  //   const idToSet = await getSingleUser(values.email);
+  //   setCurrentUser(idToSet);
+  //   navigate(`/profile/${currentUser.id}`);
+  // };
+
     
   return (
     <article className="register login">
@@ -47,24 +52,25 @@ const Login = ({ handleClose, users, loggedUser }) => {
         X
       </button>
       <h2 className="register__header">Welcome Back!</h2>
-      <form onSubmit={handleSubmit}>
+      <form className="register__form" onSubmit={handleSubmit}>
+          <motion.input
+            whileHover={{ scale: 1.8 }}
+            whileTap={{ scale: 1.4 }}
+            className="register__input"
+            name="email"
+            value={values.email}
+            placeholder="Email"
+            type="email"
+            onChange={handleInputChange}
+          />
         <motion.input
           whileHover={{ scale: 1.8 }}
           whileTap={{ scale: 1.4 }}
           className="register__input"
-          name="user_name"
-          value={values.user_name}
-          placeholder="User Name"
-          onChange={handleInputChange}
-        />
-        <motion.input
-          whileHover={{ scale: 1.8 }}
-          whileTap={{ scale: 1.4 }}
-          className="register__input"
-          name="email"
-          value={values.email}
-          placeholder="Email"
-          type="email"
+          type="password"
+          name="password"
+          value={values.password}
+          placeholder="password"
           onChange={handleInputChange}
         />
 

@@ -75,7 +75,6 @@ const Calendar = ({onDateSelection}) => {
           />
         }
       </div>
-
     </div>
   )
 }

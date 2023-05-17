@@ -2,13 +2,15 @@
 @use "../../styles/variables" as *;
 
 .upload {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   align-items: center;
-  height: 890px;
-  width: 390px;
+  height: 100vh;
+  width: 100%;
+  max-width: 600px;
   background-color: #162052;
   padding: 4%;
+  // margin-top: 38%;
   &__form {
     height: 600px;
     width: 390px;
@@ -37,36 +39,44 @@
           // border: 1px solid black;
         }
 }
-  // &__input {
-  //   width: 300px;
-  //   height: 50px;
-  //   border-radius: 20px;
-  //   border: 3px groove $primary-blue;
-  //   padding: 10px;
-  //   font-size: 18px;
-  //   background-color: bisque;
-  //   margin: 15px 0;
-  //   &:hover {
-  //     outline: none;
-  //     // border: 1px solid black;
-  //     cursor: pointer;
-  //   }
-  //   &:focus {
-  //     outline: none;
-  //     border: 1px solid black;
-  //   }
-  // }
-  &__image-preview {
-    height: 250px;
-    width: 390px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  &__image-view {
-    height: 250px;
-    width: 320px;
-    border-radius: 5%;
-  }
+&__image-preview {
+  height: 250px;
+  width: 390px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+&__image-view {
+  height: 250px;
+  width: 320px;
+  border-radius: 5%;
+}
+&__header {
+  font-size: 32px;
+  color: $primary-blue;
+}
+&__user {
+  font-size: 20px;
+  color: $primary-snow;
+}
+}
+// &__input {
+//   width: 300px;
+//   height: 50px;
+//   border-radius: 20px;
+//   border: 3px groove $primary-blue;
+//   padding: 10px;
+//   font-size: 18px;
+//   background-color: bisque;
+//   margin: 15px 0;
+//   &:hover {
+//     outline: none;
+//     // border: 1px solid black;
+//     cursor: pointer;
+//   }
+//   &:focus {
+//     outline: none;
+//     border: 1px solid black;
+//   }
+// }

@@ -1,47 +1,92 @@
-@use '../../styles/globals' as *;
+@use "../../styles/globals" as *;
 @use "../../styles/variables" as *;
 
 .ic {
-    height: 800px;
-    width: 390px;
-    background-color: #96eff8ef;
+  height: 100%;
+  width: 100%;
+  background-color: $primary-dark-blue;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 4%;
+  &__email {
+    font-size: 16px;
     display: flex;
+    color: white;
+    text-overflow: ellipsis;
+  }
+  &__image-box {
+    display: inline-flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    
-    &__image-box {
-        width: 160px;
-        height: 180px;
-        background-color: #71fbf99f;
-        margin: 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 10%;
-        box-shadow: 
-        rgb(19, 126, 145) 5px 0px 15px 10px,
-        rgb(94, 215, 236) 0px 0px 2px 20px,
-        rgb(154, 231, 244) 0px -5px 0px 20px,
-        rgb(3, 76, 89) 0px 5px 0px 20px,
-        rgb(3, 113, 132) 0px -20px 0px 15px,
-        rgb(135, 230, 247) -5px 0px 5px 10px;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 5% 0;
+    z-index: 1;
+    &::before {
+      content: "";
+      position: absolute;
+      inset: -20px 80px;
+      background: linear-gradient(315deg, #00ccff, #d400d4);
+      transition: 0.5s;
+      animation: animate 10s linear infinite;
     }
-    &__image {
-        width: 190px;
-        height: 190px;
-        border-radius: 100%;
-        border: 8px outset #9ff3f6f3;
+    &:hover::before {
+      inset: -20px 0px;
     }
-    &__email {
-        font-size: 16px;
-        display: flex;
-        color: white;
-        text-overflow: ellipsis;
+    @keyframes animate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
     }
-    &__email-box {
-        display: flex;
-        justify-content: center;
-        }
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 6px;
+      background: #162052;
+      border-radius: 50%;
+      z-index: 1;
+    }
+  }
+  &__image-content {
+    position: absolute;
+    inset: 20px;
+    border: 6px solid #070a1c;
+    z-index: 3;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    z-index: 3;
+  }
+  &__username {
+    text-align: center;
+    width: 100%;
+    margin-top: 2%;
+    font-size: 26px;
+    color: $primary-blue;
+    padding: 5%;
+    border-radius: 5px;
+    // box-shadow: rgba(0, 0, 0, 4.5) 0px 0px 5px 5px;
+  }
+  &__container {
+    border: 5px groove $primary-blue;
+    margin-bottom: 2%;
+    border-radius: 5%;
+    padding: 10%;
+    box-shadow: rgba(239, 32, 204, 0.5) 0px 0px 10px 10px;
+  }
 }
-
