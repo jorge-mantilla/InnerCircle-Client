@@ -1,5 +1,6 @@
 @use '../../styles/globals' as *;
 @use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
 
 .card {
     display: inline-flex;
@@ -16,6 +17,13 @@
         }
         &__container {
             background-color: #162052;
+            @include tablet {
+                display: block;
+                flex-direction: unset;
+            }
+            @include desktop {
+                display: flex;
+            }
         }
         &__input {
             margin: 1.25rem;

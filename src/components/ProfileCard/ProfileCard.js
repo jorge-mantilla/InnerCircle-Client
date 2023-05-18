@@ -110,6 +110,7 @@ const ProfileCard = ({ users }) => {
           type="text"
           placeholder="Send Invite To Circle"
         />
+      </div>
         {userItemsToDisplay.length > 0 ? (
           <UserItems
             userItemsToDisplay={userItemsToDisplay}
@@ -119,7 +120,6 @@ const ProfileCard = ({ users }) => {
         ) : (
           <div className="card__noitems">No items to display</div>
         )}
-      </div>
       <UploadCard
         users={users}
         userId={userId}

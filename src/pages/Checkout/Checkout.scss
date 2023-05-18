@@ -1,5 +1,6 @@
 @use "../../styles/globals" as *;
 @use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
 
 .checkout {
   background-color: $primary-dark-blue;
@@ -63,4 +64,23 @@
     display: flex;
     flex-direction: row-reverse;
   }
+  .Toastify__toast {
+    font-size: 16px;
+    margin-top: 3%;
+    border: 1px solid $primary-blue;
+    // right: unset;
+    @include tablet {
+      width: 368px;
+    }
+  }
+  .Toastify__toast-theme--light {
+    color:$primary-snow;
+    background-color: $primary-dark-blue;
+  }
+  .Toastify__close-button {
+    color: $primary-snow;
+  }
+  .Toastify__progress-bar-theme--light {
+    background: unset;
+}
 }

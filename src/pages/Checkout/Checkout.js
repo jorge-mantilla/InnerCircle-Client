@@ -1,6 +1,4 @@
-import React, { useState, useContext } from "react";
-import { Link } from "react-router-dom";
-import { AuthContext } from "../../context/AuthState";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -10,18 +8,16 @@ import "./Checkout.scss";
 const Checkout = ({ handleHideCheckout }) => {
   const [checkoutStartDate, setCheckoutStartDate] = useState(null);
   const [checkoutEndDate, setCheckoutEndDate] = useState(null);
-  const { currentUser, setCurrentUser } = useContext(AuthContext);
 
   const handleDateSelection = (startDate, endDate) => {
     setCheckoutStartDate(startDate);
     setCheckoutEndDate(endDate);
   };
   const notify = () => { 
-    toast("Message has been sent, Item reserved!");
+    toast(`Message has been sent, Item reserved! ${checkoutStartDate.toDateString()}, to ${checkoutEndDate.toDateString()}`, {postion:"top-center"});
 
-   setTimeout(() => {handleHideCheckout()} , 2500);
+   setTimeout(() => {handleHideCheckout()} , 311500);
   }
-  console.log(notify)
 
   return (
     <article className="checkout">
@@ -32,19 +28,7 @@ const Checkout = ({ handleHideCheckout }) => {
         <Calendar onDateSelection={handleDateSelection} />
       </motion.div>
 
-      {/* <p className="">Accept Price</p> */}
-
-      {/* {checkoutStartDate && (
-        <p className="checkout__start">Selected Start Date: {checkoutStartDate.toDateString()}</p>
-      )}
-
-      {checkoutEndDate && (
-        <p className="checkout__end">Selected End Date: {checkoutEndDate.toDateString()}</p>
-      )} */}
-      {/* <input className="checkout__input" placeholder="Send Email"></input> */}
-
         <div className="checkout__button-box">
-      {/* <Link to={`/profile/${currentUser.id}`}> */}
         <motion.button
           whileHover={{ scale: 1.3 }}
           whileTap={{ scale: 1.2 }}
@@ -53,8 +37,9 @@ const Checkout = ({ handleHideCheckout }) => {
           >
           Reserve
         </motion.button>
-        <ToastContainer />
-      {/* </Link> */}
+
+        <ToastContainer  position="top-center" />
+
       <motion.button
         whileHover={{ scale: 1.3 }}
         whileTap={{ scale: 1.2 }}
