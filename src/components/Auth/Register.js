@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import {v4 as uuidv4} from "uuid";
+import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
 import "./Register.scss";
-
 
 const initialValues = {
   id: uuidv4(),
@@ -35,11 +34,9 @@ const Register = ({ setSignInType, handleClose }) => {
       if (response.status !== 201) {
         throw new Error("Failed to register user.");
       }
-      window.alert('User has been registered successfully!');
+      window.alert("User has been registered successfully!");
 
-      setSignInType("login")
-      // Close the registration modal
-      // handleClose();
+      setSignInType("login");
     } catch (error) {
       setError(error.message);
     }
@@ -47,15 +44,12 @@ const Register = ({ setSignInType, handleClose }) => {
 
   return (
     <article className="register">
-      <button className="btn-x" onClick={handleClose}>
-        X
-      </button>
       <p className="register__top-text">Register</p>
       <h2 className="register__header">Join Inner Cicle!</h2>
       <form className="register__form" onSubmit={handleSubmit}>
         <motion.input
-          whileHover={{ scale: 1.8 }}
-          whileTap={{ scale: 1.4 }}
+          whileHover={{ scale: 1.4 }}
+          whileTap={{ scale: 1.2 }}
           className="register__input"
           name="user_name"
           value={values.user_name}
@@ -63,8 +57,8 @@ const Register = ({ setSignInType, handleClose }) => {
           onChange={handleInputChange}
         />
         <motion.input
-          whileHover={{ scale: 1.8 }}
-          whileTap={{ scale: 1.4 }}
+          whileHover={{ scale: 1.4 }}
+          whileTap={{ scale: 1.2 }}
           className="register__input"
           name="password"
           value={values.password}
@@ -73,8 +67,8 @@ const Register = ({ setSignInType, handleClose }) => {
           onChange={handleInputChange}
         />
         <motion.input
-          whileHover={{ scale: 1.8 }}
-          whileTap={{ scale: 1.4 }}
+          whileHover={{ scale: 1.4 }}
+          whileTap={{ scale: 1.2 }}
           className="register__input"
           name="email"
           value={values.email}
@@ -82,8 +76,8 @@ const Register = ({ setSignInType, handleClose }) => {
           onChange={handleInputChange}
         />
         <motion.input
-          whileHover={{ scale: 1.8 }}
-          whileTap={{ scale: 1.4 }}
+          whileHover={{ scale: 1.4 }}
+          whileTap={{ scale: 1.2 }}
           className="register__input"
           name="image"
           value={values.image}
@@ -91,15 +85,25 @@ const Register = ({ setSignInType, handleClose }) => {
           type="text"
           onChange={handleInputChange}
         />
+        <div className="register__button-box">
+          <motion.button
+            className="btn"
+            whileHover={{ scale: 1.4 }}
+            whileTap={{ scale: 1.2 }}
+            type="submit"
+          >
+            Submit
+          </motion.button>
 
-        <motion.button
-          className="btn"
-          whileHover={{ scale: 1.8 }}
-          whileTap={{ scale: 1.4 }}
-          type="submit"
-        >
-          Submit
-        </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.4 }}
+            whileTap={{ scale: 1.2 }}
+            className="btn"
+            onClick={handleClose}
+          >
+            Close
+          </motion.button>
+        </div>
       </form>
     </article>
   );

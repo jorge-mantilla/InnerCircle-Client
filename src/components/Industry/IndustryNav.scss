@@ -1,7 +1,7 @@
 @use '../../styles/globals' as *;
 
 .header {
-    height: 100px;
+    height: 6.25rem;
     width: 100vw;
     background-color: rgb(116, 196, 92);
     display: flex;
@@ -10,18 +10,18 @@
     &__list {
         display: flex;
         flex-direction: row;
-        width: 250px;
+        width: 15.625rem;
     }
     &__list li {
-        font-size: 20px;
-        padding: 8px;
+        font-size: 1.25rem;
+        padding: .5rem;
 
     }
     &__logo {
-        height: 240px;
+        height: 15rem;
         margin-top: 2%;
     }
     &__hero {
-        font-size: 28px;
+        font-size: 1.75rem;
     }
 }

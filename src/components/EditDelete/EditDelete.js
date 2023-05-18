@@ -5,7 +5,7 @@ import "./EditDelete.scss";
 const EditDelete = ({ handleHideDelete, itemId }) => {
   const handleDeleteItem = async (itemId) => {
     try {
-      const response = await axios.delete (
+      const response = await axios.delete(
         `http://localhost:5051/items/${itemId}`
       );
       alert("Item deleted successfully");
@@ -31,6 +31,14 @@ const EditDelete = ({ handleHideDelete, itemId }) => {
         }}
       >
         Confirm
+      </button>
+      <button
+        className="btn"
+        onClick={() => {
+          handleHideDelete();
+        }}
+      >
+        Close
       </button>
     </div>
   );

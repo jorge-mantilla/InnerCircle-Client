@@ -11,24 +11,24 @@
         flex-direction: column;
     }
     &__title{
-        font-size: 28px;
+        font-size: 1.625rem;
         color: $primary-snow;
-        padding: 12px;
+        padding: .5rem;
     }
     &__price {
-        font-size: 28px;
+        font-size: 1.75rem;
         color: $primary-snow;
-        padding: 8px;
+        padding: .5rem;
     }
     &__description {
-        font-size: 22px;
+        font-size: 1.375rem;
         color: $primary-snow;
-        padding: 12px;
+        padding: .5rem;
     }
     &__image {
-        margin-top: 10px;
-            height: 490px;
-            width: 368px;
+        margin-top: .625rem;
+            height: 30.625rem;
+            width: 23rem;
             object-fit: cover;
             z-index: 4;
     }
@@ -46,21 +46,21 @@
         display: flex;
         justify-content: center;
         position: relative;
-        width: 390px;
-        height: 510px;
+        width: 24.375rem;
+        height: 31.875rem;
         background: rgba(0, 0, 0, 0.5);
         overflow: hidden;
         z-index: 1;
         &::before {
             content:  "";
             position: absolute;
-            inset: -80px -20px;
+            inset: -5rem -1.25rem;
             background: linear-gradient(315deg,#00ccff,#d400d4);
             transition:  0.5s;
             animation: animate 5s linear infinite;
         }
         &:hover::before {
-            inset: -20px 0px;
+            inset: -1.25rem 0rem;
         }
         @keyframes animate {
             0%
@@ -75,30 +75,34 @@
         &::after {
             content: "";
             position: absolute;
-            inset: 6px;
+            inset: .375rem;
             background: #162052;
             z-index: 1;
         }
     }
     &__image-content {
         position: absolute;
-        inset: 20px;
-        border: 6px solid #070a1c;
+        inset: 1.25rem;
+        border: .375rem solid #070a1c;
         z-index: 3; 
         overflow: hidden;
     }
     &__checkout {
         z-index: 6;
     }
+    &__button-box {
+        display: flex;
+        flex-direction: row-reverse;
+    }
 }
 
 .react-multiple-carousel__arrow--left {
-    left: calc(4% + 1px);
-    top: calc(6% + 1px);
+    left: calc(4% + .0625rem);
+    top: calc(6% + .0625rem);
 }
 .react-multiple-carousel__arrow--right {
-    right: calc(4% + 1px);
-    top: calc(6% + 1px);
+    right: calc(4% + .0625rem);
+    top: calc(6% + .0625rem);
 }
 .react-multiple-carousel__arrow {
     z-index: unset;

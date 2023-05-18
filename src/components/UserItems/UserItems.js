@@ -2,18 +2,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPersonSkating } from "@fortawesome/free-solid-svg-icons";
 import { faPen } from "@fortawesome/free-solid-svg-icons";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
-import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import React, { useState } from "react";
 import EditDelete from "../EditDelete/EditDelete";
-import axios from "axios";
+// import axios from "axios";
 import "./UserItems.scss";
 
 const UserItems = ({ userItemsToDisplay, handleAddItem, handleDeleteItem }) => {
   const [showDelete, setShowDelete] = useState(false);
   const [itemIdToDelete, setItemIdToDelete] = useState(null);
-  //   const [showCheckout, setShowCheckout] = useState(false);
 
   const handleShowDelete = (itemId) => {
-      console.log(itemId)
+    console.log(itemId);
     setItemIdToDelete(itemId);
     setShowDelete(true);
   };
@@ -22,9 +22,8 @@ const UserItems = ({ userItemsToDisplay, handleAddItem, handleDeleteItem }) => {
   };
 
   console.log(userItemsToDisplay);
-  console.log(handleShowDelete)
-  console.log(showDelete)
-
+  console.log(handleShowDelete);
+  console.log(showDelete);
 
   return (
     <article className="useritems">
@@ -53,7 +52,7 @@ const UserItems = ({ userItemsToDisplay, handleAddItem, handleDeleteItem }) => {
                       style={{ color: "#ffffff" }}
                     />
                     <FontAwesomeIcon
-                       onClick={() => handleShowDelete(item.id)}
+                      onClick={() => handleShowDelete(item.id)}
                       icon={faTrash}
                       size="lg"
                       style={{ color: "#ffffff" }}
@@ -62,7 +61,9 @@ const UserItems = ({ userItemsToDisplay, handleAddItem, handleDeleteItem }) => {
                 </div>
                 <div className="useritems__image-div">
                   {item.image ? (
-                    <img
+                    <motion.img
+                      whileHover={{ scale: 1.4 }}
+                      whileTap={{ scale: 1.2 }}
                       className="useritems__image"
                       src={item.image}
                       alt="item"
