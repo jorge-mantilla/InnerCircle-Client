@@ -23,14 +23,12 @@ const Login = ({ handleClose }) => {
       [name]: value,
     });
   };
-  // console.log(" possible current User?:", values);
-  // console.log("this is the current user:", currentUser);
-
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     const user = await getSingleUserByEmail(values.email);
     if (user) {
-      console.log(user)
+      console.log(user);
       setCurrentUser(user);
       navigate(`/profile/${user.id}`);
     } else {
@@ -38,34 +36,23 @@ const Login = ({ handleClose }) => {
     }
   };
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   const idToSet = await getSingleUser(values.email);
-  //   setCurrentUser(idToSet);
-  //   navigate(`/profile/${currentUser.id}`);
-  // };
-
-    
   return (
     <article className="register login">
-      <button className="btn-x" onClick={handleClose}>
-        X
-      </button>
       <h2 className="register__header">Welcome Back!</h2>
       <form className="register__form" onSubmit={handleSubmit}>
-          <motion.input
-            whileHover={{ scale: 1.8 }}
-            whileTap={{ scale: 1.4 }}
-            className="register__input"
-            name="email"
-            value={values.email}
-            placeholder="Email"
-            type="email"
-            onChange={handleInputChange}
-          />
         <motion.input
-          whileHover={{ scale: 1.8 }}
-          whileTap={{ scale: 1.4 }}
+          whileHover={{ scale: 1.4 }}
+          whileTap={{ scale: 1.2 }}
+          className="register__input"
+          name="email"
+          value={values.email}
+          placeholder="Email"
+          type="email"
+          onChange={handleInputChange}
+        />
+        <motion.input
+          whileHover={{ scale: 1.4 }}
+          whileTap={{ scale: 1.2 }}
           className="register__input"
           type="password"
           name="password"
@@ -73,15 +60,25 @@ const Login = ({ handleClose }) => {
           placeholder="password"
           onChange={handleInputChange}
         />
+        <div className="register__button-box">
 
         <motion.button
           className="btn"
-          whileHover={{ scale: 1.8 }}
-          whileTap={{ scale: 1.4 }}
+          whileHover={{ scale: 1.4 }}
+          whileTap={{ scale: 1.2 }}
           type="submit"
-        >
+          >
           Log in
         </motion.button>
+      <motion.button
+        whileHover={{ scale: 1.4 }}
+        whileTap={{ scale: 1.2 }}
+        className="btn"
+        onClick={handleClose}
+        >
+        Close
+      </motion.button>
+        </div>
       </form>
     </article>
   );

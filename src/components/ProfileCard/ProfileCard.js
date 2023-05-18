@@ -3,6 +3,7 @@ import { AuthContext } from "../../context/AuthState";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleUser } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate, useParams } from "react-router-dom";
+import { motion } from "framer-motion";
 import UploadCard from "../UploadCard/UploadCard.js";
 import UserItems from "../UserItems/UserItems";
 import axios from "axios";
@@ -67,7 +68,8 @@ const ProfileCard = ({ users }) => {
         <div className="card__image-box">
           <div className="card__image-content">
             {currentUser && currentUser.image ? (
-              <img
+              <motion.img
+              whileHover={{ scale: 1.3 }}
                 className="card__image"
                 src={currentUser.image}
                 alt="profile"
@@ -86,26 +88,37 @@ const ProfileCard = ({ users }) => {
             <p className="card__text">{currentUser.user_name}</p>
           </div>
         </div>
-        <button onClick={handleLogout} className="btn">
-          Logout
-        </button>
         <div className="card">
           <div className="card__box">
             <p className="card__text">{currentUser.email}</p>
           </div>
         </div>
-        <UserItems
-          userItemsToDisplay={userItemsToDisplay}
-          handleAddItem={handleAddItem}
-          handleDeleteItem={handleDeleteItem}
-        />
+        <motion.button
+          whileHover={{ scale: 1.4 }}
+          whileTap={{ scale: 1.2 }}
+          onClick={handleLogout}
+          className="btn"
+        >
+          Logout
+        </motion.button>
 
-        <input
+        <motion.input
+          whileHover={{ scale: 1.4 }}
+          whileTap={{ scale: 1.2 }}
           className="card__input"
           name="add_user"
           type="text"
-          placeholder="Join Cicle"
+          placeholder="Send Invite To Circle"
         />
+        {userItemsToDisplay.length > 0 ? (
+          <UserItems
+            userItemsToDisplay={userItemsToDisplay}
+            handleAddItem={handleAddItem}
+            handleDeleteItem={handleDeleteItem}
+          />
+        ) : (
+          <div className="card__noitems">No items to display</div>
+        )}
       </div>
       <UploadCard
         users={users}

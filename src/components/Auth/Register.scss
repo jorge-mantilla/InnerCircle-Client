@@ -8,11 +8,11 @@
     align-items: center;
     z-index: 10;
     &__input {
-        margin: 20px;
-        padding: 10px;
-        width: 280px;
-        border: 6px groove $primary-blue;
-        font-size: 20px;
+        margin: 1.25rem;
+        padding: .625rem;
+        width: 17.5rem;
+        border: .375rem groove $primary-blue;
+        font-size: 1.25rem;
         background-color: $primary-snow;
         color: $primary-dark-blue;
         &:hover {
@@ -24,17 +24,18 @@
         }
     }
     &__text {
-        margin: 20px;
-        font-size: 20px;
+        margin: 1.25rem;
+        font-size: 1.25rem;
         color: $primary-snow;
     }
     &__top-text {
-        margin: 20px;
-        font-size: 28px;
+        margin: 1.25rem;
+        font-size: 1.75rem;
         color: $primary-snow;
     }
     &__header {
-        font-size: 32px;
+        margin-top: 10%;
+        font-size: 2rem;
         padding: 5%;
         color: $primary-blue;
     }
@@ -42,5 +43,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    &__button-box {
+        margin-top: 10%;
+        display: flex;
+        flex-direction: row-reverse;
     }
 }

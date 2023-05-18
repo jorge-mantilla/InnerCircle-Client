@@ -7,24 +7,24 @@
   align-items: center;
   height: 100vh;
   width: 100%;
-  max-width: 600px;
+  max-width: 37.5rem;
   background-color: #162052;
   padding: 4%;
   // margin-top: 38%;
   &__form {
-    height: 600px;
-    width: 390px;
+    height: 37.5rem;
+    width: 24.375rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 20%;
   }
   &__input {
-    margin: 20px;
-    padding: 10px;
-    width: 280px;
-    border: 14px groove $primary-blue;
-    font-size: 20px;
+    margin: 1.25rem;
+    padding: .625rem;
+    width: 17.5rem;
+    border: .875rem groove $primary-blue;
+    font-size: 1.25rem;
     background-color: $primary-snow;
     color: $primary-dark-blue;
     &:hover {
@@ -36,47 +36,47 @@
     }
     &:focus {
           outline: none;
-          // border: 1px solid black;
+          // border: .0625rem solid black;
         }
 }
 &__image-preview {
-  height: 250px;
-  width: 390px;
+  height: 15.625rem;
+  width: 24.375rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 &__image-view {
-  height: 250px;
-  width: 320px;
+  height: 15.625rem;
+  width: 20rem;
   border-radius: 5%;
 }
 &__header {
-  font-size: 32px;
+  font-size: 2rem;
   color: $primary-blue;
 }
 &__user {
-  font-size: 20px;
+  font-size: 1.25rem;
   color: $primary-snow;
 }
 }
 // &__input {
-//   width: 300px;
-//   height: 50px;
-//   border-radius: 20px;
-//   border: 3px groove $primary-blue;
-//   padding: 10px;
-//   font-size: 18px;
+//   width: 18.75rem;
+//   height: 3.125rem;
+//   border-radius: 1.25rem;
+//   border: .1875rem groove $primary-blue;
+//   padding: .625rem;
+//   font-size: 1.125rem;
 //   background-color: bisque;
-//   margin: 15px 0;
+//   margin: .9375rem 0;
 //   &:hover {
 //     outline: none;
-//     // border: 1px solid black;
+//     // border: .0625rem solid black;
 //     cursor: pointer;
 //   }
 //   &:focus {
 //     outline: none;
-//     border: 1px solid black;
+//     border: .0625rem solid black;
 //   }
 // }

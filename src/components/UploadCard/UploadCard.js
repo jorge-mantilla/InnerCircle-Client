@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { AuthContext } from "../../context/AuthState";
-import { v4 as uuidv4 } from 'uuid';
+import { motion } from "framer-motion"
 import axios from 'axios';
 import "./UploadCard.scss";
 
@@ -41,7 +41,9 @@ const UploadCard = ({ userId, handleUserItemAdd }) => {
       <h1 className='upload__header'>Upload Item</h1>
       <p className='upload__user'>{currentUser.user_name}</p>
       <form className='upload__form' onSubmit={handleSubmit}>
-        <input
+        <motion.input
+         whileHover={{ scale: 1.4 }}
+         whileTap={{ scale: 1.2 }}
           className='upload__input'
           name='title'
           type='text'
@@ -49,7 +51,9 @@ const UploadCard = ({ userId, handleUserItemAdd }) => {
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
-        <input
+        <motion.input
+         whileHover={{ scale: 1.4 }}
+         whileTap={{ scale: 1.2 }}
           className='upload__input'
           name='price'
           type='text'
@@ -57,7 +61,9 @@ const UploadCard = ({ userId, handleUserItemAdd }) => {
           value={price}
           onChange={(e) => setPrice(e.target.value)}
         />
-        <input
+        <motion.input
+         whileHover={{ scale: 1.4 }}
+         whileTap={{ scale: 1.2 }}
           className='upload__input'
           name='description'
           type='text'
@@ -70,7 +76,9 @@ const UploadCard = ({ userId, handleUserItemAdd }) => {
               <img className='upload__image-view' src={imageUrl} alt='Image Preview' />
             </div>
           )}
-      <input
+      <motion.input
+       whileHover={{ scale: 1.4 }}
+       whileTap={{ scale: 1.2 }}
           className='upload__input'
           name='image'
           type='text'
@@ -78,7 +86,8 @@ const UploadCard = ({ userId, handleUserItemAdd }) => {
           value={imageUrl}
           onChange={(e) => setImageUrl(e.target.value)}
         />
-        <button className='btn' type='submit'>Submit</button>
+        <motion.button  whileHover={{ scale: 1.4 }}
+        whileTap={{ scale: 1.2 }} className='btn' type='submit'>Submit</motion.button>
       </form>
     </div>
   );

@@ -2,32 +2,33 @@
 @use "../../styles/variables" as *;
 
 .header {
-    height: 65px;
+    height: 4.0625rem;
     width: 100%;
     background-color: $primary-dark-blue;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px double $primary-blue;
+    border-bottom: .0625rem double $primary-blue;
     
     &__hero {
-        font-size: 22px;
-        padding-left: 40px;
+        font-size: 1.375rem;
+        width: 9.375rem;
+        padding-left: 1.25rem;
         color: $primary-snow;
     }
     &__list {
         display: flex;
         align-items: center;
-        width: 350px;
+        width: 15.625rem;
         
     }
     &__register {
-        padding: 0 30px;
+        padding: 0 3.125rem;
         color: $primary-snow;
-        font-size: 18px;
+        font-size: 1.125rem;
     }
     &__login {
-        font-size: 18px;
+        font-size: 1.125rem;
         color: $primary-snow;
     }
 }
