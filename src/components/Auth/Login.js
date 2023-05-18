@@ -23,6 +23,7 @@ const Login = ({ handleClose }) => {
       [name]: value,
     });
   };
+  console.log("currentuser",currentUser)
   
   const handleSubmit = async (e) => {
     e.preventDefault();
